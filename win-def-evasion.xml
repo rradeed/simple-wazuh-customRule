@@ -1,0 +1,13 @@
+<group name="windows, incident_response, defense_evasion,">
+  <!-- custom rules in Wazuh must start at ID 100000 or higher -->
+  <rule id="100050" level="12">
+    <!-- links to base Windows Security events -->
+    <if_sid>60106, 60009</if_sid> 
+    <field name="win.system.eventID">^1102$</field>
+    <description>Defense Evasion: Windows Security Audit Log Cleared</description>
+    <mitre>
+      <id>T1070.001</id>
+    </mitre>
+    <group>pci_dss_10.6.1, gdpr_IV_35.7.d,</group>
+  </rule>
+</group>
