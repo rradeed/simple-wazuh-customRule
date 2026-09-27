@@ -1,0 +1,1 @@
+# simple-wazuh-customRule
